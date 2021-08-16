@@ -1,0 +1,24 @@
+.history-container {
+    padding-top: 0.5rem;    
+    hr{
+        opacity: 0.5;
+    }
+    .history  {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5rem 0;
+        padding: 0.3rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    }
+    .income{
+        border-right: 5px solid #2ed573;
+    }
+    .exspense{
+        border-right: 5px solid #ff4757;
+
+    }
+
+
+  }

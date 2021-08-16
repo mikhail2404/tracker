@@ -1,0 +1,34 @@
+.balance-container {
+    padding-top: 1rem;
+    h3{
+        text-transform: uppercase;
+    }
+    .balance-info {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        background: #fff;
+        padding: 1rem 0;
+        margin: 0.5rem 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    
+        position: relative;
+        .income {
+            span{
+                color: #2ed573;
+            }
+        }
+        .line{
+            border-right: 1px solid black;
+            opacity: 0.3;
+            height:  55%;
+            position:absolute;
+            left: 50%;
+        }
+        .expense {
+            span{
+                color: #ff4757;
+            }
+        }
+    }
+  }
