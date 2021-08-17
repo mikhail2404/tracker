@@ -1,42 +1,40 @@
-import { useState } from 'react'
+import { useState} from 'react'
 
-const AddTraker = ({setExpense, setIncome, income, exspense, setBalance}) => {
-    const [amount, setAmount] =  useState('') 
-    const  selectAmount = (e) => {
-        const newValue = e.target.value.trim()
-        setAmount(newValue)
-
-    }
-     const transiton =  async () => {
-        if(Number.isInteger(Number(amount))  && amount.includes('+')){
-            setIncome(income + Number(amount))
-
-        }
-        else if(Number.isInteger(Number(amount)) && amount.includes('-')){
-            setExpense(exspense - Number(amount))
-
-        }
-        else{
-            alert('Enter a number')
-        }
-        await setBalance(income - exspense)
+const AddTraker = ({transiton}) => {
+    const [amount, setAmount] =  useState('')
+    const [text, setText] = useState('')
+    const   handleSubmit = (e) => {
+        e.preventDefault()
+        transiton(amount, text)
         setAmount('')
-
-
+        setText('')
     }
-    console.log(amount);
+
     return (
         <div className="new-tracker">
             <h3>AddTracker</h3>
             <hr />
-            <div  className="input-container">
-                <h4>Text</h4>
-                <input type="text" placeholder="  Enter text..."/>
-                <h4>Amount</h4>
+            <form className="form-container" onSubmit={handleSubmit}>
+                <label>Text</label>
+                <input 
+                    type="text" 
+                    placeholder="  Enter text..."
+                    id="text"
+                    value={text}
+                    onChange={(e) => setText(e.target.value)} 
+                    />
+                <label>Amount</label>
                 <span>(negative-expense, positive-income)</span>
-                <input onChange={selectAmount} value={amount} type="text" placeholder="  Enter amount..."/>
-            </div>
-            <button onClick={transiton}>Add transition</button>
+                <input  
+                    type="text" 
+                    placeholder="  Enter amount..."
+                    id="amount"
+                    value={amount} 
+                    onChange={(e) => setAmount(e.target.value)}
+                    />
+
+                <button  type="submit">Add transition</button>
+            </form>
         </div>
     )
 }

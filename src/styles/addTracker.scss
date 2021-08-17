@@ -1,25 +1,25 @@
 .new-tracker {
 
-    .input-container {
+    .form-container {
         display: flex;
         flex-direction: column;
-        h4{
+        label{
             padding-top: 1rem;
         }
         input{
             margin-top: 0.5rem;
             padding: 0.5rem 0;
         }
-  
-    }
-    button{
-        margin-top: 0.5rem;
-        width: 100%;
-        padding: 0.5rem 0;
-        cursor: pointer;
-        background: #82589F;
-        outline: none;
-        border: none;
-        color: #fff;
+
+        button{
+            margin-top: 0.5rem;
+            width: 100%;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            background: #82589F;
+            outline: none;
+            border: none;
+            color: #fff;
+        }
     }
   }

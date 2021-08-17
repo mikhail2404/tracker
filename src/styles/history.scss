@@ -1,5 +1,6 @@
 .history-container {
-    padding-top: 0.5rem;    
+    padding-top: 0.5rem;   
+    position: relative; 
     hr{
         opacity: 0.5;
     }
@@ -10,6 +11,22 @@
         margin: 0.5rem 0;
         padding: 0.3rem;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ 
+    }
+    .delete{
+        background: #ff4757;
+        color: #fff;
+        border: none;
+        outline: none;
+        text-align: center;
+        font-size: 1.2rem;
+        position: absolute;
+        cursor: pointer;
+        top: 32%;
+        left: -6%;
+        padding: 0.25rem 0.4rem 0.5rem 0.3rem;
+        opacity: 0;
+        transition: all 0.3s ease;
 
     }
     .income{
@@ -20,5 +37,7 @@
 
     }
 
-
+    &:hover .delete{
+        opacity: 1;
+    }
   }
